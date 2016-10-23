@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace lorum\Http\Controllers\Auth;
 
-use App\User;
+use lorum\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use lorum\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller

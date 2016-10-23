@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace lorum\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
