@@ -12,3 +12,5 @@
 */
 
 Route::resource('lorem', 'LoremController');
+Route::resource('users', 'UsersController');
+Route::resource('landing', 'LandingController');

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use lorum\Http\Requests;
 
-class LoremController extends Controller
+class LandingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class LoremController extends Controller
      */
     public function index()
     {
-        //Shows a default of 5 paragraphs
-		return view('lorem.index');
+        //
+		return view('landing.index');
     }
 
     /**
@@ -38,13 +38,6 @@ class LoremController extends Controller
     public function store(Request $request)
     {
         //
-		$this -> validate($request, [
-			'count' => 'required|numeric|min:1|max:10',
-		]);
-		
-		$count = $request -> input('count');
-		
-		return view('lorem.store')->with('count',$count);
     }
 
     /**
@@ -53,10 +46,9 @@ class LoremController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($count)
+    public function show($id)
     {
-        //Shows text, based on paragraph count
-		return view('lorem.show')->with('count',$count);
+        //
     }
 
     /**
@@ -65,7 +57,6 @@ class LoremController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-	  
     public function edit($id)
     {
         //

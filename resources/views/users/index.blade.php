@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 
-@section('title', 'Lorem Ipsum')
+@section('title', 'Random User Generator')
 
 {{--
 This `head` section will be yielded right before the closing </head> tag.
@@ -14,16 +14,16 @@ such as a page specific stylesheets.
 
 
 @section('content')
-	<h1> How many paragraphs do you need? </h1><br>
-	<hr>
-	<form action="/lorem" method="post">
+	<h1> Lets create a new random human shall we?</h1>
+	<form action="/users" method="post">
 		{{ csrf_field() }}
-		Number of Paragraphs (1-10):<br><br>
-		<input type="text" name="count" value="5"><br><br>
-		<input type="submit" value="Submit">
-	</form>	
-	<hr>
+		Which first name style? <br>
+		<input type="radio" name="gender" value="male" checked="checked"> Male <br>
+		<input type="radio" name="gender" value="female"> Female <br>
+		<input type="submit" value="Create a human!">
+	</form>
 	<br>
+	
 @endsection
 
 

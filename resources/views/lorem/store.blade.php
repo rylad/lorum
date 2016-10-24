@@ -19,6 +19,8 @@ such as a page specific stylesheets.
 @section('content')
     @if($count)
         <p>
+			<h1> Dont forget, you asked for this: </h1>
+			<hr>
 			<?php
 				$generator = new Badcow\LoremIpsum\Generator();
 				$paragraphs = $generator->getParagraphs($count);
@@ -28,6 +30,26 @@ such as a page specific stylesheets.
     @else
         <h1>There was no amount of paragraphs chosen</h1>
     @endif
+	
+	@if(count($errors) > 0)
+		<ul>
+			@foreach($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+		</ul>
+	@endif
+
+	<br>
+	<hr>
+	<h1> Do you need more words? </h1><br>
+	<form action="/lorem" method="post">
+		{{ csrf_field() }}
+		Number of Paragraphs (1-10):<br><br>
+		<input type="text" name="count"><br><br>
+		<input type="submit" value="Submit">
+	</form>	
+	<hr>
+	<br>	
 @stop
 
 
