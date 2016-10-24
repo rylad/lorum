@@ -20,9 +20,9 @@ such as a page specific stylesheets.
 	<p>
 		@if($gender == "male")
 		<?php
-			$f_content = file('/var/www/lorum/resources/assets/users/male_first.txt');
+			$f_content = file('../resources/assets/users/male_first.txt');
 			$first = $f_content[array_rand($f_content)];
-			$l_content = file('/var/www/lorum/resources/assets/users/last.txt');
+			$l_content = file('../resources/assets/users/last.txt');
 			$last = $l_content[array_rand($l_content)];
 			$email_raw = $first."@".$last.".com";
 			$email=preg_replace('/\s+/', '', $email_raw);
@@ -30,9 +30,9 @@ such as a page specific stylesheets.
 		?>
 		@elseif($gender == "female")
 		<?php
-			$f_content = file('/var/www/lorum/resources/assets/users/female_first.txt');
+			$f_content = file('../resources/assets/users/female_first.txt');
 			$first = $f_content[array_rand($f_content)];
-			$l_content = file('/var/www/lorum/resources/assets/users/last.txt');
+			$l_content = file('../resources/assets/users/last.txt');
 			$last = $l_content[array_rand($l_content)];
 			$email_raw = $first."@".$last.".com";
 			$email=preg_replace('/\s+/', '', $email_raw);
