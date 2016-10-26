@@ -28,7 +28,7 @@ such as a page specific stylesheets.
 	<form action="/lorem" method="post">
 		{{ csrf_field() }}
 		Number of Paragraphs (1-10):<br><br>
-		<input type="text" name="count" value='{{old("count")}'><br><br>
+		<input type="text" name="count" value='{{old("count")}}'><br><br>
 		<input type="submit" value="Submit">
 	</form>	
 	<hr>
