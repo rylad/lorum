@@ -56,9 +56,16 @@ such as a page specific stylesheets.
 	<h1> Do you need more words? </h1><br>
 	<form action="/custom" method="post">
 		{{ csrf_field() }}
+		
+		What should we source words from?<br><br>
+		<input type="radio" name="source" value="action_hero" checked="checked">The Last Action Hero<br><br>
+		<input type="radio" name="source" value="flubber">Flubber<br><br>
+		<input type="radio" name="source" value="hackers">Hackers<br><br>
+		<input type="radio" name="source" value="matrix">The Matrix<br><br>
+		
 		Number of Paragraphs (1-10):<br><br>
 		<input type="text" name="count"><br><br>
-		<input type="submit" value="Submit">
+		<input type="submit" value="MORE STUFF!!">
 	</form>	
 	<hr>
 	<br>	
