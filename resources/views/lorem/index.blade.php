@@ -29,7 +29,7 @@ such as a page specific stylesheets.
 		{{ csrf_field() }}
 		Number of Paragraphs (1-10):<br><br>
 		<input type="text" name="count" value='{{old("count")}}'><br><br>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Compute">
 	</form>	
 	<hr>
 	<br>

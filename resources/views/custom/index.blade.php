@@ -36,7 +36,7 @@ such as a page specific stylesheets.
 		And how many paragraphs should we generate...<br><br>
 		<input type="text" name="count" value='{{old("count")}}'><br><br>
 		
-		<input type="submit" value="Submit">
+		<input type="submit" value="Create the Stuff!">
 	</form>	
 	<hr>
 	<br>
