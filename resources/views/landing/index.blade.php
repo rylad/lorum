@@ -18,6 +18,7 @@ such as a page specific stylesheets.
 	<hr>
 	<a href="/lorem"><h2>Give me words to make a website look real (Lorem Ipsum)</h2></a><br>
 	<a href="/users"><h2>Create a real human entity (User Generator)</h2></a>
+	<a href="/custom"><h2>Sometimes Lorem Ipsum isnt enough...</h2></a>
 	<hr>
 	<br>
 @endsection

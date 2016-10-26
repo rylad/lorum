@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 
-@section('title', 'Lorem Ipsum')
+@section('title', 'Custom Ipsum')
 
 {{--
 This `head` section will be yielded right before the closing </head> tag.
@@ -14,9 +14,9 @@ such as a page specific stylesheets.
 
 
 @section('content')
-	<h1> How many paragraphs do you need? </h1><br>
+	<h1> So you decided to get crazy eh? </h1><br>
 	<hr>
-
+	
 	@if(count($errors) > 0)
     <ul>
         @foreach ($errors->all() as $error)
@@ -24,11 +24,18 @@ such as a page specific stylesheets.
         @endforeach
     </ul>
 	@endif
-
-	<form action="/lorem" method="post">
+	
+	<form action="/custom" method="post">
 		{{ csrf_field() }}
-		Number of Paragraphs (1-10):<br><br>
-		<input type="text" name="count" value='{{old("count")}'><br><br>
+		What should we source words from?<br><br>
+		<input type="radio" name="source" value="action_hero">The Last Action Hero<br><br>
+		<input type="radio" name="source" value="flubber">Flubber<br><br>
+		<input type="radio" name="source" value="hackers">Hackers<br><br>
+		<input type="radio" name="source" value="matrix">The Matrix<br><br>
+		
+		And how many paragraphs should we generate...<br><br>
+		<input type="text" name="count" value='{{old("count")}}'><br><br>
+		
 		<input type="submit" value="Submit">
 	</form>	
 	<hr>
